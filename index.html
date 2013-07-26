@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Crowdec - the crowd software design site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -14,6 +14,13 @@
           rel="stylesheet" type="text/css">
     <style type="text/css">
 
+      a:hover, .navbar-inverse:hover, .brand:hover{
+      color: #fb0
+      }
+      a {
+      color:#308;
+      }
+      
       /* Large desktop */
       @media (min-width: 980px) { 
       body {
@@ -68,7 +75,6 @@
       padding: 2% 0%;
       }
       .actions {
-      background-color: #343434;
       padding: 3% 0%;
       }
       .video, .thermometer, .order, .social, .statistics {
@@ -97,15 +103,162 @@
       .footer a {
       color: #ccccff;
       }
+
+      .coursera-ribbon {
+      position: fixed;
+
+      /* Add a bit of padding to give some substance outside the "stitching" */
+      padding: 2px 0;
+
+      /* Set the base colour */
+      background-color: #fb0;
+
+      /*background-color: #408;*/
+
+      /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+      background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+      background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+      background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+      background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
+
+      /* Add a drop shadow */
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+
+      z-index: 9999;
+      }
+
+      @media (max-width: 979px) {
+      .coursera-ribbon {
+      position: absolute;
+      display: none;
+      }	
+      }
+
+      .coursera-ribbon a,
+
+      .coursera-ribbon a,
+      .coursera-ribbon a:hover {
+      /* Set the font */
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+
+      /* Set the text properties */
+      text-decoration: none;
+      text-shadow: 0 -1px rgba(0,0,0,0.5);
+      text-align: center;
+
+      width: 300px;
+      line-height: 20px;
+
+      /* Set the layout properties */
+      display: inline-block;
+      padding: 4px 0;
+
+      /* Add "stitching" effect */
+      border-width: 1px 0;
+      border-style: dotted;
+      border-color: rgba(255,255,255,0.7);
+      }
+
+      .coursera-ribbon a span.smalltext {
+      font-size: 12px;
+      }
+
+      .coursera-ribbon-wrapper {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      z-index: 9999;
+      }
+
+      .coursera-ribbon-wrapper.right {
+      right: 0;
+      }
+
+      .coursera-ribbon-wrapper.right .coursera-ribbon {
+      top: 52px;
+      right: -73px;
+
+      /* Rotate the banner 45 degrees */
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      }.coursera-ribbon a:hover {
+      /* Set the font */
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+
+      /* Set the text properties */
+      text-decoration: none;
+      text-shadow: 0 -1px rgba(0,0,0,0.5);
+      text-align: center;
+
+      width: 300px;
+      line-height: 20px;
+
+      /* Set the layout properties */
+      display: inline-block;
+      padding: 4px 0;
+
+      /* Add "stitching" effect */
+      border-width: 1px 0;
+      border-style: dotted;
+      border-color: rgba(255,255,255,0.7);
+      }
+
+      .coursera-ribbon a span.smalltext {
+      font-size: 12px;
+      }
+
+      .coursera-ribbon-wrapper {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      z-index: 9999;
+      }
+
+      .coursera-ribbon-wrapper.right {
+      right: 0;
+      }
+
+      .coursera-ribbon-wrapper.right .coursera-ribbon {
+      top: 52px;
+      right: -73px;
+
+      /* Rotate the banner 45 degrees */
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      }
+
     </style>
   </head>
   <body>
+    <div id="ribbon" class="coursera-ribbon-wrapper right" style="pointer-events: none;">
+      <div class="coursera-ribbon">
+        <a href="https://class.coursera.org/startup-001/class/index" style="pointer-events: all;">Created for the Coursera<br><span class="smalltext">Stanford Startup Engineering Course</span></a>
+      </div>
+    </div>
 
     <!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
+    <div  class="navbar navbar-inverse navbar-fixed-top">
+      <div    class="navbar-inner">
+        <div  class="container">
           <button type="button" class="btn btn-navbar"
                   data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
@@ -115,9 +268,11 @@
           <a class="brand" href="#">Crowdec</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Projects</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#details">Details</a></li>
+              <li style="padding: 10px;"><span style="padding: 10px 15px 10px;" id='like'><iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcrowdec&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
+	      </span></li>
+              <li  style="padding: 10px;"><a href="https://twitter.com/crowdec_com" class="twitter-follow-button" data-show-count="false">Follow @crowdec_com</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -145,27 +300,31 @@
         </div>
       </div>
       <div class="row-fluid pitch">
-        <div class="span6 offset1 video">
+        <div class="span5 offset2 video">
           <img class="img-polaroid" src="http://images.all-free-download.com/images/graphiclarge/man_silhouette_clip_art_9510.jpg">
         </div>
 
         <div class="row-fluid section2">
           <div class="span3 offset1 copy copy-right">
-            <p style="padding-top:10%">
+            <p style="padding-top:15%">
  	      Is that all that a software developer should know about the user?
             </p>
           </div>
         </div>
-        <div class="span12 lead" style="text-align: center;padding-top:10%">
+        <div class="span12 lead" style="text-align: center;padding-top:10%;padding-bottom:5%">
           We don't think so.
         </div>
-        <div class="span12 " style="margin-top:10%">
-          <div class="span1"><br/></div>
+        <div class="span12 lead" style="text-align: center;padding-top:5%;padding-bottom:5%">
+          They should deliver the software the users really want.
+        </div>
+        <div class="span12 " style="margin-top:5%">
+          <div class="span2"><br/></div>
           <div class="span3">
-            On Crowdec you can ask people about your ideas to select the apps that have a real user interest.
+            On Crowdec you can ask people about your ideas so you can
+            work on projects that have a real user interest.
           </div>
           <div class="span3">
-            Future users help the designers to pick
+            Future users help you to pick
             the important features, and to recoginse those that just burn
             the time of the developers.
           </div>
@@ -176,16 +335,7 @@
         </div>
         <!-- We define a new 'actions' div to contain statistics,
         order, and share buttons.-->
-        <div class="span12 lead" style="margin-top:10%">
-          <hr/>
-        </div>
-        <div class="span12 lead" style="margin-top:10%">
-          <div class="span1 "><br/></div>
-          <div class="span3 ">Share it!</div>
-          <div class="span3 ">Be informed when we have enough support!</div>
-          <div class="span3 ">Don't miss when we go live!</div>
-          <div class="span1 "><br/></div>
-        </div>
+<!--
         <div class="span12 actions" style="margin-top:10%">
           <div class="span8 ">
             <div class="statistics">
@@ -193,6 +343,7 @@
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
+<!--
                 <div class="linediv-l" style="text-align:center">
                   <h3>1000</h3> <p>backers</p>
                 </div>
@@ -206,7 +357,9 @@
           </div>
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress
+            -->
+<!--
             <div class="thermometer progress active">
               <div class="bar bar-success" style="width: 60%;"></div>
               <div class="bar bar-warning" style="width: 40%;"></div>
@@ -214,65 +367,198 @@
           </div>
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+            <!-- See:
+            http://noizwaves.github.io/bootstrap-social-buttons -->
+<!--
+            
+            
           </div>
         </div>
       </div>
-
+-->
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse
       -->
-      <!--
+        <div class="span12 lead" style="text-align: center;padding-top:5%;padding-bottom:5%">
+          <hr/>
+        </div>
+
       <div class="row-fluid faq">
-        <div class="span10 offset1">
-          <h3>FAQ</h3>
+        <div class="span9 offset2">
+          
+          <a id="details"><h3>Details</h3></a>
+          
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse"
                    data-parent="#accordion2" href="#collapseOne">
-                  What does FAQ stand for?
+                  How does it work?
                 </a>
               </div>
               <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  Frequently Asked Question.
+                  Anyone can create a project based on his/her
+                  idea or need.<br/> 
+                  The users can vote for projects they see
+                  promising so you can see how much interest your
+                  project has. <br/>The owner or other users can come up
+                  with features and alternative ways of how the feature should wok.<br/>
+                  Voting works for the features and the alternatives
+                  too, so developers know which features to implement
+                  first and how the users would like them to look and behave.
                 </div>
               </div>
             </div>
+
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse"
                    data-parent="#accordion2" href="#collapseTwo">
-                  What's a Frequently Asked Question?
+                  What's the difference compared to existing
+                  crowdfunding sites?
                 </a>
               </div>
               <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  A question which is commonly asked by users.
+                  The main goal in Crowdec is not to get funding
+                  to implement your project, but to let the users
+                  shape it: 
+                  <ul>
+                    <li>They select the best ideas</li>
+                    <li>They help to decide which are the features worth developing</li>
+                    <li>And they assist in designing it to really fulfill their needs</li>
+                  </ul>
+                  In addition to this you can ask for various kinds of
+                  contributions depending on your need: publicity
+                  (e.g. social sharing), help in the graphical design,
+                  coding, or whatever you need to implement your system.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseThree">
+                  Is it only for software developers?
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Absolutely not.<br/> You can start a project even if you
+                  are not able to realize it.<br/> If you have a good idea,
+                  or a problem that is not (sufficiently) solved by
+                  any existing software that you know, create a project.<br/>
+                  If it's good stuff you others will probably join and
+                  you will get help.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseFour">
+                  Is it only for software projects?
+                </a>
+              </div>
+              <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  In the first turn we focus on software
+                  projects. In case of real user demand we will
+                  consider other areas.<br/> In the mean time there is
+                  nothing preventing you from using it for any project
+                  that you like.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseFive">
+                  How can I help to make it happen?
+                </a>
+              </div>
+              <div id="collapseFive" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  First of all, help us to design a good site that fits to YOUR needs. <br/>
+                  For any site using crowd intelligence it's important to
+                  have lots of users. Help us to get new users  by sharing
+                  /following/liking us on social media. Refer to us in
+                  blogs, put a link pointing to our site or any specific
+                  project that you like on our site.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseSix">
+                  When and how can I use it?
+                </a>
+              </div>
+              <div id="collapseSix" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  As soon as the basic functions work reliably we
+                  would like to have real users. You will be able to
+                  browse the site without any ceremony. You can create your
+                  own project or contribute to others after a quick,
+                  free registration.<br/>Like us on facebook 
+
+                  and follow us on twitter and we keep you up to date
+                  about our progress.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseSeven">
+                  What if I miss a feature or don't like something?
+                </a>
+              </div>
+              <div id="collapseSeven" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Use Crowdec :-).<br/> We want to eat our own dogfood:<br/>
+                  there will be a project for Crowdec where you can
+                  suggest features, alternatives and vote for the
+                  propsals of other users.
+                  Until the site goes live you can give us feedback
+                  via mail, or <a href="http://www.facebook.com/crowdec">facebook</a>.
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="span12 lead" style="text-align: center;padding-top:2%;padding-bottom:2%">
+          <hr/>
+        </div>
 
-      </div>
-      -->
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
-      <!--
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0</a>, without all the cruft that would otherwise
-            b put at the bottom of the page. </p>
+        <div class="span12 lead" style="padding-top:2%;padding-bottom:2%">
+          <div class="span2 "><br/></div>
+          <div class="span3 ">Share and follow it!</div>
+          <div class="span3 ">Help shape the system!</div>
+          <div class="span3 ">Join us and use it!</div>
+          <div class="span1 "><br/></div>
+        </div>
+
+        <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+        <!-- http://creativecommons.org/licenses/ -->
+        <!--
+        <div class="row-fluid footer">
+          <div class="span12">
+            <p>This work is licensed under
+              the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+                By-SA 3.0</a>, without all the cruft that would otherwise
+              b put at the bottom of the page. </p>
+          </div>
         </div>
       </div>
-    </div>
-    -->
+      -->
   </body>
 </html>
