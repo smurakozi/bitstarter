@@ -245,7 +245,24 @@
       transform: rotate(45deg);
       }
 
-    </style>
+   /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+ div.addthis_toolbox {
+  width:320px;
+  margin: 0 auto;
+ }    </style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43001423-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
   </head>
   <body>
     <div id="ribbon" class="coursera-ribbon-wrapper right" style="pointer-events: none;">
@@ -269,15 +286,32 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="#details">Details</a></li>
+<!--
               <li style="padding: 10px;"><span style="padding: 10px 15px 10px;" id='like'><iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcrowdec&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
 	      </span></li>
               <li  style="padding: 10px;"><a href="https://twitter.com/crowdec_com" class="twitter-follow-button" data-show-count="false">Follow @crowdec_com</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+<script>!function(d,s,id){var --
+  --js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, --
+  --'script', 'twitter-wjs');</script></li>
+-->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520146c0513718b2"></script>
+<!-- AddThis Button END -->
 
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
@@ -543,7 +577,7 @@
           <div class="span2 "><br/></div>
           <div class="span3 ">Share and follow it!</div>
           <div class="span3 ">Help shape the system!</div>
-          <div class="span3 ">Join us and use it!</div>
+          <div class="span3 ">Join us and use it!</div>/
           <div class="span1 "><br/></div>
         </div>
 
@@ -560,5 +594,15 @@
         </div>
       </div>
       -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43001423-1', 'herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>
